@@ -1,6 +1,10 @@
 from rest_framework import serializers
 
 class TaskSerializer(serializers.Serializer):
+    id = serializers.IntegerField(
+        read_only=True
+    )
+    
     title = serializers.CharField(
         required = True
     )
@@ -10,6 +14,5 @@ class TaskSerializer(serializers.Serializer):
     )
 
     done = serializers.BooleanField(
-        required=True,
-        default=False
+        required=True
     )
