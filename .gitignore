@@ -1,1 +1,3 @@
 venv/
+todoist/todo/__pychache__/
+*.pyc
