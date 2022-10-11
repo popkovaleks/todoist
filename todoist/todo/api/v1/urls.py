@@ -6,7 +6,14 @@ urlpatterns = [
     path('tasks', views.TaskViewset.as_view(
         {
             'get':'list',
-            'post':'add'
+            'post':'add',
+            'put':'update',
+            'delete':'delete'
         }
+    )),
+    path('tasks/<int:pk>', views.TaskDetailViewset.as_view(
+        {
+            'get': 'details'
+            }
     ))
 ]
